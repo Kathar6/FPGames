@@ -6,6 +6,7 @@
 *{
     font-family:"Montserrat";
     color:white;
+    font-size:1.4vw;
 }
 a,button{
     all:unset;
@@ -26,37 +27,63 @@ body{
     background-size:100vw 100vh;
     grid-template-areas:
     "header header header header header header"
-    "section section section section section section"
+    "span1 section section section section span2"
     "footer footer footer footer footer footer";
     margin:0;
     text-align:center;
+}
+.span1{
+    grid-area:span1;
+}
+.span2{
+    grid-area:span2;
 }
 header,footer{
     background-color:var(--c_negro);
     
 }
 header{
-    display:block;
+    display:grid;
     grid-area:header;
     margin-bottom:1vh;
     height:5vh;
     padding-left:1vw;
     padding-right:1vw;
+    padding-top:0;
+    grid-template-areas: 
+    "logo logo logo logo logo logo logo logo logo logo logo logo logo logo logo logo logo logo logo logo logo logo logo logo logo logo logo logo logo logo logo logo logo logo btnInicio btnContacto";
 }
-header > *{
-    margin-top:1vh;
+#Logo{
+    grid-area:logo;
+    text-align:left;
+    margin-top:.6%;
 }
-header > span{
-    float:left;
-}
-header a{
-    float:right;
-}
-.btnInicio{
+header button{
     border:1px solid #fff;
     background-color:transparent;
-    padding:5%;
     border-radius:var(--b_radio);
+    transition-property: transform,border-color;
+    transition-duration: .2s;
+    height:65%;
+    width:95%;
+    max-height: 90%;
+    max-width: 100%;
+}
+header a{
+    display: inline-block;
+    position:relative;
+    top:10%;
+}
+header button:hover{
+    transform: scale(1.04);
+    border-color:#424242;
+    cursor:pointer;
+}
+.btnInicio{
+    grid-area:btnInicio;
+}
+.btnContacto{
+    grid-area:btnContacto;
 }
 section{
     grid-area:section;
@@ -68,6 +95,7 @@ section{
     color:black;
     overflow-y:scroll;
     padding-left:1%;
+    z-index:1;
 }
 section::-webkit-scrollbar{
     background-color:#373737;
@@ -80,17 +108,21 @@ section>*{
 section>p{
     text-align:left;
 }
+section > h2{
+    text-align:left;
+}
 .games div{
     display:grid;
     width:25vw;
     height:40vh;
     transition: transform .2s;
-    grid-template-columns:1fr; 
+    grid-template-columns:1fr;
     grid-template-rows:6fr 1fr; 
     margin:0 auto;
 }
 .games div:hover{
     transform:scale(1.03);
+    cursor:pointer;
 }
 .games div img{
     grid-column:1/2;
