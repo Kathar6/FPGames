@@ -1,43 +1,57 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>FPGames</title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link type="text/css" rel="stylesheet" href="css/styles.css"/>
     <link rel="shortcut icon" href="img/FlamePixel.ico" type="image/x-icon">
 </head>
 <body>
-    <div class="fadeOut"></div>
-    <header>
-        <img src="img/FlamePixel.ico" alt="Logo FlamePixelGames" class="imgLogo">
-        <span id="Logo">FPGames</span>
-        <a href="index.html" class="btnInicio"><button>Inicio</button></a>
-        <a href="contacto.html" class="btnContacto"><button>Contacto</button></a>
-    </header>
-    <div class="span1"></div>
-    <section>
-        <h1>¡Bienvenidos!</h1>
-        <br>
-        <p>Esta es una pagina con el objetivo de publicar los juegos que estamos desarrollando, ademas de mostrar nuestros avances con algun juego.</p>
-        <h2>Juegos en Desarrollo.</h2>
-        <div class="games">
-            <div class="game1">
-                <a href="proyectoG.html">
-                    <img src="img/img_game1.png" alt="Game1">
-                    <span>Proyecto G</span>
-                </a>
+    <!-- #region Barra de navegacion -->
+    <nav class="navbar navbar-light pl-1 pt-0 pb-0 bg-dark nav-bar-fixed-top header1">
+        <div class="nav-brand">
+            <img src="img/FlamePixel.ico" alt="Logo FlamePixelGames" class="imgLogo">
+            <span class="nav-brand d-none d-md-inline d-xl-inline">FPGames</span>
+        </div>
+        <ul class="navbar float-right">
+            <li class="nav-item">
+                <a href="index.html" class="nav-link">Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a href="contacto.html" class="nav-link">Contacto</a>
+            </li>
+        </ul>
+    </nav>
+    <!-- #endregion -->
+
+    <section class="container bg-light text-dark pb-2 mt-1 rounded border">
+        <div class="row">
+            <div class="col text-center">
+                    <h1>¡Bienvenidos!</h1>
             </div>
-            <!--<div class="game2">
-                <img src="" alt="Game2">
+            <div class="row pl-1">
+                <div class="col-12">
+                    <p>Bienvenidos a la pagina web oficial de FPGames (FlamePixelGames). 
+                    En esta pagina encontraras las actualizaciones que estamos haciendo a nuestro juegos.</p>
                 </div>
-            -->
+                <div class="col-12 text-center">
+                    <h2>Juegos en Desarrollo.</h2>
+                </div>
+                <div class="col-sm-10 col-md-3 Juegos mx-auto">
+                    <div class="card">
+                        <img src="img/img_game1.png" alt="Proyecto_G" class="card-img-top imgJuego1">
+                        <div class="card-body bg-secondary text-white">
+                            <h5 class="card-title">Proyecto_G</h5>
+                            <p class="card-text">Version 0.9.2</p>
+                            <a href="proyectoG.html" class="btn btn-dark">Ingresar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-    <div class="span2"></div>
-    <footer>FlamePixelGames © 2019</footer>
-    <script src="js/script.js"></script>
 </body>
 </html>

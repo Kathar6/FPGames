@@ -1,158 +1,26 @@
 :root{
-    --c_negro:#212121;
-    --c_section: #616161;
-    --b_radio:5px;
+    --c_negro:#eee;
 }
 *{
-    font-family:"Montserrat";
-    color:white;
     font-size:2.5vh;
 }
-a,button{
-    all:unset;
-    -moz-all:unset;
-    -webkit-all:unset;
-}
-.fadeOut{
-    position: absolute;
-    top:0vh;
-    left:0vw;
-    background-color:#000;
-    width:100vw;
-    height:100vh;
-    z-index:2;
-}
 body{
-    display:grid;
-    background-image:url("../img/bg_image.jpg");
-    background-repeat: no-repeat;
-    background-size:100vw 100vh;
-    grid-template-areas:
-    "header header header header header header"
-    "span1 section section section section span2"
-    "footer footer footer footer footer footer";
-    margin:0;
-    text-align:center;
+    background-color:var(--c_negro);
 }
-.span1{grid-area:span1;}
-.span2{grid-area:span2;}
-header,footer{background-color:var(--c_negro);}
-header{
-    display:grid;
-    grid-area:header;
-    margin-bottom:1vh;
-    height:5vh;
-    padding-left:1vw;
-    padding-right:1vw;
-    padding-top:0;
-    grid-template-areas: 
-    "imglogo logo logo logo logo logo logo logo logo logo logo logo logo logo logo logo logo logo logo logo logo logo logo logo logo logo logo logo logo logo logo logo logo logo btnInicio btnContacto";
+.header1{
+    color:white;
 }
 .imgLogo{
-    grid-area:imglogo;
-    max-width:4.2vw;
-    max-height:4.7vh;
+    width:15%;
+    height:15%;
 }
-#Logo{
-    grid-area:logo;
-    text-align:left;
-    margin-left:0;
-    margin-top:.6%;
+a{
+    all:unset;
 }
-header button{
-    border:1px solid #fff;
-    background-color:transparent;
-    border-radius:var(--b_radio);
-    transition-property: transform,border-color;
-    transition-duration: .2s;
-    padding:auto 0;
-    height:65%;
-    width:95%;
-    max-height: 90%;
-    max-width: 100%;
-}
-header a{
-    display: inline-block;
-    position:relative;
-    top:10%;
-}
-header button:hover{
-    transform: scale(1.04);
-    border-color:#424242;
+a:hover{
+    color:#858585;
     cursor:pointer;
 }
-.btnInicio{grid-area:btnInicio;}
-.btnContacto{grid-area:btnContacto;}
-section{
-    grid-area:section;
-    color:black;
-    margin-left:1vw;
-    background-color:var(--c_section);
-    height:88vh;
-    margin-right:1vw;
-    color:black;
-    overflow-y:auto;
-    overflow-x:hidden;
-    padding-left:1%;
-    z-index:1;
-}
-section::-webkit-scrollbar{
-    background-color:#373737;
-    width:.5%;
-    border-radius:var(--b_radio);
-}
-section>*{color:white;}
-section>p{text-align:left;}
-section > h2{text-align:left;}
-section a:hover{cursor:pointer;color:#424242;}
-.games div{
-    display:grid;
-    width:25vw;
-    height:40vh;
-    transition: transform .2s;
-    grid-template-columns:1fr;
-    grid-template-rows:6fr 1fr; 
-    margin:0 auto;
-}
-.games div:hover{
-    transform:scale(1.03);
-    cursor:pointer;
-}
-.games div img{
-    grid-column:1/2;
-    grid-row:1/2;
-    width: 100%;
-    height: 100%;
-    margin:0;
-}
-.games div .bg_game{transition: background-color .2s;}
-.games div .bg_game:hover{background-color:#000;}
-.games div span{
-    grid-column:1/3;
-    grid-row:2/3;
-    display:flex;
-    background-color:#212121;
-    border-bottom-left-radius: var(--b_radio);
-    border-bottom-right-radius: var(--b_radio);
-    max-width:100%;
-    height:10%;
-    justify-content: center;
-    align-items: center;
-    margin-top:-2%;
-}
-.games div a{
-    display:inline-block;
-    grid-column:1/2;
-    grid-row:1/2;
-    width:100%;
-    height:100%;
-    margin:0;
-}
-footer{
-    display:flex;
-    grid-area:footer;
-    height:5vh;
-    margin-top:1vh;
-    justify-content: center;
-    align-items: center;
+li{
+    list-style-type:none;
 }
